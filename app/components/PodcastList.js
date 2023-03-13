@@ -34,7 +34,7 @@ export default function PodcastList({ data }) {
         <div className="-mt-20">Not Podcast to show you...</div>
       )}
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-24 gap-x-14 lg:gap-y-32 lg:gap-x-12  ">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-24 gap-x-14 lg:gap-y-32 lg:gap-x-12  ">
         <Card pods={podcastMemo} />
       </ul>
     </>
