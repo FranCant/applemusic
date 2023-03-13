@@ -3,7 +3,7 @@ import React from "react";
 export default function Loading() {
   return (
     <div className="relative">
-      <div className="absolute top-1 right-1" role="status">
+      <div className="absolute -top-10 right-1" role="status">
         <svg
           aria-hidden="true"
           class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
