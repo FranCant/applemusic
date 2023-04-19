@@ -14,7 +14,6 @@ export default function Card({ pods }) {
             <div className="absolute inset-x-auto -top-[25%] overflow-hidden rounded-full w-36 h-36 shadow-xl">
               <Image
                 src={pod["im:image"][2].label}
-                // fill={true}
                 width={500}
                 height={500}
                 alt="Picture of the author"
@@ -22,13 +21,10 @@ export default function Card({ pods }) {
             </div>
             <div className="flex flex-col items-center justify-center mb-4 space-y-1 text-center">
               <p className=" font-semibold uppercase text-base">
-                {pod["im:name"].label.split(" ").slice(0, 4).join(" ")}
+                {pod["im:name"].label.split(" ", 4).join(" ")}
               </p>
               <p className="font-normal text-gray-400 text-xs w-full">
-                {`Author: ${pod["im:artist"].label
-                  .split(" ")
-                  .slice(0, 4)
-                  .join(" ")}`}
+                {`Author: ${pod["im:artist"].label.split(" ", 4).join(" ")}`}
               </p>
             </div>
           </li>

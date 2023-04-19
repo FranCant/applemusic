@@ -17,13 +17,12 @@ const handleFetch = async () => {
 
 export default async function CardDetail({ podcast = [] }) {
   const data = await handleFetch();
-// console.log(podcast)
   const mapPodcast = podcast.map((el) => el.collectionId).slice(0, 1);
-  
+
   const filterArtist = data?.find(
     (el) => el.id?.attributes["im:id"] == mapPodcast
   );
-// console.log(filterArtist)
+
   return (
     <div className="flex justify-center w-64">
       <div className="block max-w-sm rounded-lg bg-white p-8 shadow-lg">

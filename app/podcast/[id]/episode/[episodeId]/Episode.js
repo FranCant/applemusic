@@ -3,11 +3,7 @@ import parse from 'html-react-parser'
 
 export default function Episode({ id, episodeId }) {
     
-//   console.log(id);
-//   console.log(episodeId);
-  //   const mapPodcast = episodeId.map((el) => el.collectionId).slice(0, 1);
   const filterEpisode = id?.find((el) => el.trackId == episodeId);
-  //   console.log(filterEpisode);
   return (
     <div className="py-6 w-full grid grid-cols-6 justify-items-start">
       <div className="col-span-2">
