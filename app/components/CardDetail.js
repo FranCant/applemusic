@@ -25,8 +25,8 @@ export default async function CardDetail({ podcast = [] }) {
 
   return (
     <div className="w-full flex justify-start md:w-64">
-      <div className="md:block grid grid-cols-3 w-full rounded-lg bg-white p-8 shadow-lg">
-        <Link href={`/podcast/${mapPodcast}`}>
+      <div className="md:block grid grid-cols-4 md:grid-cols-3 w-full rounded-lg bg-white p-8 shadow-lg">
+        <Link href={`/podcast/${mapPodcast}`} className="col-span-4 md:col-span-1 flex md:flex-col max-md:space-x-4">
           <div className="relative md:w-52 w-28 h-28 md:h-60 col-span-1 flex items-center justify-center rounded-md overflow-hidden">
             <Image
               src={filterArtist["im:image"][2].label}
@@ -46,7 +46,7 @@ export default async function CardDetail({ podcast = [] }) {
             </p>
           </div>
         </Link>
-        <div className="col-span-1">
+        <div className="col-span-4">
           <h5 className="text-sm font-semibold">Description:</h5>
           <p className="text-sm font-normal italic whitespace-wrap break-words">
             {filterArtist.summary.label}
